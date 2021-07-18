@@ -1,0 +1,10 @@
+
+
+const addPrefix = (name) => {
+  return function yourPrefix(prefix) {
+    return `Welcome to our restaurant, ${prefix} ${name}!`;
+  }
+}
+
+let name = addPrefix("Laurie");
+name("Dr.");
