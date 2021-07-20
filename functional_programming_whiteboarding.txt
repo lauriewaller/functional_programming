@@ -1,4 +1,27 @@
 
+//currying and closures
+
+// Use closures to create multiple functions for adding both a prefix and a suffix to a name. For example, it should be possible to do the following:
+// const misterJunior = nameEnhancer("Mister")("Junior");
+// const duchessThird = nameEnhancer("Duchess")("The Third");
+
+const nameEnhancer = name => {
+  return function(prefix) {
+    return function(suffix) {
+      return `Please welcome to the stage, ${prefix} ${name} ${suffix}!`;
+    }
+  }
+}
+
+nameEnhancer("Laurie")("Dr.")("The Third")
+
+const me = nameEnhancer("Laurie");
+me("President")("The Honorable")
+
+
+
+//closures
+
 //Use a closure to create multiple functions for adding a prefix to a name. The prefix could be Doctor, Duchess, Sir, and so on.
 //It should be possible to create a new prefix function like this:
 //const prefixSir = addPrefix("Sir");
