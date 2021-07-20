@@ -2,6 +2,25 @@
 
 //RECURSION
 
+// Problem #2
+// Write a recursive function that concatenates "red green refactor" to a string X number of times, where X is the argument passed into the function. rgr(3) should return the following:
+
+// "red green refactor red green refactor red green refactor"
+
+const rgr = (x) => {
+
+  if (x === 0) {
+    return "";
+  } else {
+    console.log("x = " + x)
+    x--
+    console.log("x-- = " + x)
+    return rgr(x) + "red green refactor ";
+  }
+} 
+
+rgr(3)
+
 // Problem #1
 // Write a recursive function that reverses the order of words in a sentence. For instance, "I am a cat" should become "cat a am I".
 
