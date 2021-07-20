@@ -1,7 +1,7 @@
 
 
 const addPrefix = (name) => {
-  return function yourPrefix(prefix) {
+  return function (prefix) {
     return `Welcome to our restaurant, ${prefix} ${name}!`;
   }
 }
