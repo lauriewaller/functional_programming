@@ -1,10 +1,29 @@
 
+//Use a closure to create multiple functions for adding a prefix to a name. The prefix could be Doctor, Duchess, Sir, and so on.
+//It should be possible to create a new prefix function like this:
+//const prefixSir = addPrefix("Sir");
+
 
 const addPrefix = (name) => {
-  return function (prefix) {
+  return function(prefix) {
     return `Welcome to our restaurant, ${prefix} ${name}!`;
   }
 }
 
 let name = addPrefix("Laurie");
 name("Dr.");
+
+//Use a closure to create multiple functions for making various animal noises. For example, it should be possible to do the following:
+//const lionSound = soundMaker("roar");
+//const mouseSound = soundMaker("squeak");
+
+const soundMaker = animal => {
+  return function(sound) {
+    return `The ${animal} makes the sound ${sound}.`
+  }
+}
+
+const lion = soundMaker("lion");
+lion("roar");
+
+soundMaker("lamb")("bleet")
