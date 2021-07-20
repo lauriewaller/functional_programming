@@ -1,6 +1,28 @@
 
-//currying and closures
 
+//RECURSION
+
+// Problem #1
+// Write a recursive function that reverses the order of words in a sentence. For instance, "I am a cat" should become "cat a am I".
+
+let string = "I am a cat"
+let array = string.split(' ');
+
+const reverseString = (string) => {
+  if (string.length === 0) {
+    return string;
+ } else {
+  console.log(string)
+  console.log(string[0])
+  return reverseString(string.slice(1, array.length)) + " " + string[0];
+  }
+}
+
+reverseString(array)
+
+
+
+//CURRYING AND CLOSURES
 
 // Use closures to create multiple functions to first add to and then multiply a value. It should be possible to do the following:
 
