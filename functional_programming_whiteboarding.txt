@@ -12,14 +12,30 @@ const rgr = (x) => {
   if (x === 0) {
     return "";
   } else {
-    console.log("x = " + x)
-    x--
-    console.log("x-- = " + x)
+    console.log("x = " + x);
+    x--;
+    console.log("x-- = " + x);
     return rgr(x) + "red green refactor ";
   }
 } 
 
-rgr(3)
+rgr(3);
+
+OR:
+
+const rgr = (x, string) => {
+
+  if (x === 0) {
+    return "";
+  } else {
+    console.log("x = " + x);
+    x--;
+    console.log("x-- = " + x);
+    return rgr(x, string) + string + " ";
+  }
+} 
+
+rgr(3, "I love horses");
 
 // Problem #1
 // Write a recursive function that reverses the order of words in a sentence. For instance, "I am a cat" should become "cat a am I".
