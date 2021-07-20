@@ -1,6 +1,30 @@
 
 //currying and closures
 
+
+// Use closures to create multiple functions to first add to and then multiply a value. It should be possible to do the following:
+
+// const addTwoMultiplyByThree = addaMult(2)(3);
+// const addFiveMultiplyByNine = addaMult(5)(9);
+
+
+const addaMult = initialValue => {
+  return function(addedValue) {
+    return function(multipliedValue) {
+      return (initialValue + addedValue) * multipliedValue;
+    }
+  }
+}
+
+const testOne = addaMult(1);
+testOne(2)(3);
+
+addaMult(1)(2)(3);
+
+const testTwo = addaMult(2);
+testTwo(2)(3);
+
+
 // Use closures to create multiple functions for adding both a prefix and a suffix to a name. For example, it should be possible to do the following:
 // const misterJunior = nameEnhancer("Mister")("Junior");
 // const duchessThird = nameEnhancer("Duchess")("The Third");
