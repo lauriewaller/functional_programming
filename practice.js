@@ -6,7 +6,10 @@ testString = "aaabccdddda";
 
 
 const compressedString = (string, counter, letter) => {
-  if (string === "") {
+    if (typeof(string) !== string) {
+        return;
+    }
+    if (string === "") {
     return "";
     //if current element, previous element, next element are equal 
   } else if (string[0] === letter && string[0] === string[1]) { 
